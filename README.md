@@ -40,9 +40,11 @@ muscle partner
 
 ##3, UI設計
 
-◯ユーザー側UI(3枚)
+◯ユーザー側UI(４枚)
 - タイムライン
 - マイページ
+- メニューの追加
+- 投稿画面
 
 ■バックエンド機能
 機能部分
@@ -57,10 +59,10 @@ muscle partner
 
 |column|説明|type|default|null|備考|
 |---|---|---|---|---|---|
-| `uuid` | 紐づくユーザーのID | references |  | false | |
 | `nick_name` | ニックネーム | string |  | false | |
 | `mail_adress` | メールアドレス | text | | false | |
 | `pass_word` | パスワード | string | | false | |
+| `icon_image` | アイコン画像 | string | | true | |
 
 - 関連
   - `has_many :menus`
@@ -70,9 +72,8 @@ muscle partner
 | column | 説明 | type | default | null | 備考 |
 |---|---|---|---|---|---|
 | `user_id` | 紐づくUserのid | references | | false | |
-| `icon_image` | アイコン画像 | string | | true | |
-| `name` | メニュー名 | string | | false | |
-| `unit` | 単位 | string | | false | |
+| `menu_name` | メニュー名 | string | | false | |
+| `visible` | 表示 | string | | false | |
 
 
 - 関連
@@ -84,9 +85,10 @@ muscle partner
 | column | 説明 | type | default | null | 備考 |
 |---|---|---|---|---|---|
 | `user_id` | 紐づくUserのid | references | | false | |
-| `menu` | メニュー | string |  | false | |
-| `value` | 投稿されたメニューの値 | integer | | false | |
+| `menu_name` | メニュー | string |  | false | |
+| `count` | 投稿されたメニューの値 | integer | | false | |
 | `remarks` | 備考 | text | | true | |
+| `work_date` | 日付 | text | | false | |
 
 
 - 関連
