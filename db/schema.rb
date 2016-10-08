@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161005113824) do
+ActiveRecord::Schema.define(version: 20161008093254) do
 
   create_table "menus", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -29,8 +29,10 @@ ActiveRecord::Schema.define(version: 20161005113824) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip",     limit: 255
     t.string   "last_sign_in_ip",        limit: 255
-    t.datetime "created_at",                                      null: false
-    t.datetime "updated_at",                                      null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "nick_name",              limit: 255
+    t.string   "icon_image",             limit: 255
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

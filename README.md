@@ -73,7 +73,7 @@ muscle partner
 |---|---|---|---|---|---|
 | `user_id` | 紐づくUserのid | references | | false | |
 | `menu_name` | メニュー名 | string | | false | |
-| `visible` | 表示 | string | | false | |
+| `visible` | 表示 | string | 1 | false | |
 
 
 - 関連
