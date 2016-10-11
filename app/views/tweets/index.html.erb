@@ -1,0 +1,22 @@
+
+
+<div>
+
+<% @tweet.each do |tweet|%>
+  <%  if tweet.user_id == current_user.id %>
+    <% if tweet.present? %>
+    <%= tweet.work_date %>
+    のトレーニング<br>
+
+    <%= tweet.menu_name  %>を
+    <%= tweet.count %>回やりました。
+
+    <%= link_to '削除', "/tweet/#{tweet.id}", method: :delete %><br>
+    <% else %>
+    今日は
+    <% end %>
+
+  <% end %>
+<% end %>
+</div>
+

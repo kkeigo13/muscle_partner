@@ -1,0 +1,20 @@
+<div>
+  </*% if menus.errors[:menu].any? %>
+  </*% menu.errors.full_messages %>
+  </*% end %>
+  <%= form_tag('/menus', method: :post) do %>
+    <input placeholder="新しいメニュー" type="string" name="menu">
+
+    <input type="submit" value="SENT">
+  <% end %>
+
+
+</div>
+
+<div>
+  <p>あなたのメニュー一覧</p>
+  <ul class="all_menus">
+<%= render @menus %>
+
+  </ul>
+</div>

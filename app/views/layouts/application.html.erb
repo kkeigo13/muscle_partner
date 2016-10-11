@@ -5,18 +5,49 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>
+  $(function() {
+      $('#navToggle').click(function(){//headerに .openNav を付加・削除
+          $('header').toggleClass('openNav');
+      });
+  });
+  </script>
 </head>
 <body>
 <header>
   <div>
-    <p>ここはヘッダーとハンバーガーメニュー</p>
+    <% if user_signed_in? %>
+      <div>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+      </div>
+    <% else %>
+      <div>
+        <%= link_to "ログイン", new_user_session_path %>
+        <%= link_to "新規登録", new_user_registration_path %>
+      </div>
+    <% end %>
+    <div id="navToggle">
+      <div>
+        <span></span> <span></span> <span></span>
+      </div>
+    </div><!--#navToggle END-->
+    <nav>
+      <ul>
+        <li><a href="/user/">My Page</a></li>
+        <li><a href="/tweet/new/">投稿する</a></li>
+        <li><a href="/menus/">メニューを追加</a></li>
+        <li><a href="/tweet/">投稿一覧</a></li>
+
+      </ul>
+    </nav>
   </div>
 </header>
-
-<%= yield %>
-
+<div id="common_wrap">
+  <%= yield %>
+</div>
 <footer>
-  <p>ここはfooterだYO！</p>
+  <p>ここはfooter！</p>
 </footer>
 
 </body>
