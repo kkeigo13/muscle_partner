@@ -4,6 +4,16 @@
   <%= devise_error_messages! %>
 
   <div class="field">
+    <%= f.label :ニックネーム %><em>(6文字以内)</em><br />
+    <%= f.text_field :nick_name, autofocus: true, maxlength: "6" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :アイコン画像 %>
+    <%= f.file_field :icon_image %>
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>

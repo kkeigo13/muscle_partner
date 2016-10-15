@@ -10,7 +10,7 @@
 
     <%= tweet.menu_name  %>を
     <%= tweet.count %>回やりました。
-
+    <%= link_to '編集', "/tweet/#{tweet.id}/edit", method: :get %>
     <%= link_to '削除', "/tweet/#{tweet.id}", method: :delete %><br>
     <% else %>
     今日は
