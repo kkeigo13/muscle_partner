@@ -1,10 +1,11 @@
 <div>
-  <%= form_tag('/tweet', method: :post) do %>
-    <input placeholder="日付" type="date" name="work_date">
-    <input placeholder="メニュー" type="string" name="menu_name">
-    <input placeholder="回数(半角入力)" type="integer" name="count">回
-    <textarea cols="20" name="remarks" placeholder="備考" rows="5"></textarea>
-    <input type="submit" value="SENT">
+  <%= form_for @tweet do |f| %>
+    <%= f.date_field :work_date, placeholder: '日付' %>
+    <%= f.collection_select :menu_name, @menu, :menu, :menu, :include_blank => "メニューを選択" %>
+
+    <%= f.number_field :count, placeholder: '回数(半角入力)' %>
+    <%= f.text_field :remarks, placeholder: '備考', cols: 20, rows: 5 %>
+    <%= button_tag type: "submit" do %>投稿する<% end %>
   <% end %>
 
 

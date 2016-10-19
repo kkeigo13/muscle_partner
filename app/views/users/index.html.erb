@@ -1,3 +1,29 @@
-ホーム画面
 
-<%= link_to 'ユーザー情報編集', edit_user_registration_path %>
+<div class="clear"></div>
+<div class="main_visual">
+    <div id="main_title">
+      muscle partner
+    </div>
+</div>
+<div id="common_wrap">
+
+  <div class="prof_area">
+    <div class="table_row">
+      <div id="icon_image">
+        <%= image_tag current_user.icon_image %>
+      </div>
+      <div id="user_data">
+        <%= current_user.nick_name %>
+        さんの筋トレデータ
+      </div>
+    </div>
+    <div class="table_row prof_a">
+      <%= link_to 'ユーザー情報編集', edit_user_registration_path %>
+    </div>
+  </div>
+
+  <div class="graph_area">
+    ここはグラフエリア
+  </div>
+
+</div>

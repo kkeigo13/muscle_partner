@@ -141,7 +141,6 @@ header ul li a {
   width: 1000px;
   height: 2000px;
   background-color: white;
-  margin: 0 auto;
 }
 
 /*新規登録画面のフォーム*/
@@ -222,6 +221,3 @@ header ul li:last-child {border-bottom:none}
 */
 /*mediaqueryここまで
 */
-.clear{
-  clear: both;
-}

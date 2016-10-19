@@ -2,14 +2,19 @@ class TweetsController < ApplicationController
   before_action :move_to_sign_in
 
   def index
-    @tweet = Tweet.all
+    @tweet = Tweet.order("work_date DESC").page(params[:page]).per(20)
   end
 
   def new
+    @tweet = Tweet.new
+    @menu1 = Menu.where(user_id: current_user.id)
+    @menu2 = Menu.where(user_id: 1)
+    @menu = @menu1 + @menu2
+
   end
 
   def create
-    Tweet.create(work_date: tweet_params[:work_date], menu_name: tweet_params[:menu_name], count: tweet_params[:count], remarks: tweet_params[:remarks], user_id: current_user.id)
+    Tweet.create(tweet_params)
   end
   def destroy
     tweet = Tweet.find(params[:id])
@@ -32,7 +37,7 @@ class TweetsController < ApplicationController
 
   private
   def tweet_params
-    params.permit(:work_date, :menu_name, :count, :remarks)
+    params.require(:tweet).permit(:work_date, :menu_name, :count, :remarks).merge(user_id: current_user.id)
   end
 
   def move_to_sign_in

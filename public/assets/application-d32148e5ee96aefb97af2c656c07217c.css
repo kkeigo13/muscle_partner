@@ -19,7 +19,7 @@ time, mark, audio, video {
     background: transparent;
 }
 
-
+*= require_tree
 
 /*header{
   width: 100%;
@@ -49,7 +49,7 @@ footer{
     display:block;
     position:absolute; /*#navToggle div に対して*/
     width:100%;
-    border-bottom:solid 3px #fff;
+    border-bottom:solid 3px #999;
     -webkit-transition: .35s ease-in-out;
     -moz-transition: .35s ease-in-out;
     transition: .35s ease-in-out}
@@ -57,11 +57,73 @@ footer{
 #navToggle span:nth-child(2) {top:11px}
 #navToggle span:nth-child(3) {top:22px}
 
+@media screen and (max-width: 640px) {
 
+/*header menu*/
+/*nav要素は絶対位置指定にして、ビューの外側に置いて見えなくします。
+nav の中の ul li は横並びを解除して縦組みにレイアウトし直します。*/
+header nav {
+    position: absolute; /*bodyに対しての絶対位置*/
+    right:0;
+    top: -300px; /*通常時はビュー外*/
+    background:rgba(255,255,255,.7);
+    width:50%;
+    padding:0 10px;
+    -webkit-transition:.5s ease-in-out; /*transitionで動きを*/
+    -moz-transition:.5s ease-in-out;
+    transition:.5s ease-in-out;
+    text-align:left}
+header ul {margin:0}
+header ul li {
+    display:block;
+    margin:0;
+    border-bottom:dotted 1px #fff;
+    line-height:3}
+header ul li a {display:block}
+header ul li::after {content:''}
+header ul li:last-child {border-bottom:none}
+
+/* Toggle(Button) */
+/*display:noneだったボタンを display:blockにして表示します*/
+#navToggle {display:block}
+
+/* Click Toggle(Button) */
+/*ここから jQueryで header要素に付けた「.openNav」を利用します*/
+/*.openNavが付いた要素内のボタン（#navToggle）内のspanへの指定*/
+/*最初のspanをマイナス45度に*/
+.openNav #navToggle span:nth-child(1) {
+    top: 11px;
+    -webkit-transform:rotate(-45deg);
+    -moz-transform:rotate(-45deg);
+    transform:rotate(-45deg)}
+/*2番目と3番目のspanを45度に*/
+.openNav #navToggle span:nth-child(2),
+.openNav #navToggle span:nth-child(3) {
+    top: 11px;
+    -webkit-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    transform:rotate(45deg)}
+
+/*header menu*/
+/*.openNavが付いた要素の中のnavを 縦方向に351px移動（=表示される）*/
+.openNav nav {
+    -moz-transform: translateY(351px);
+    -webkit-transform: translateY(351px);
+    transform: translateY(351px)}
+}
+
+/*320px以下のデバイスに適用するCSS*/
+/*@media screen and (max-width: 320px) {
+    body {
+        background-color: #68B876;
+    }
+}
+*/
+/*mediaqueryここまで*/
 
 
 /*header footer*/
-footer {
+header, footer {
     width:100%;
     z-index:2;
     position:fixed;
@@ -77,7 +139,7 @@ header {
     display:table;
     font-size:0; /*ul,liが親のfont-sizeを継承して隙間が空くのをリセット*/
     line-height:0;
-    width: 100%;
+    height: 150px;
 }
 header h1, nav {
     display:table-cell}
@@ -138,10 +200,11 @@ header ul li a {
   line-height: 120%;
 }
 #common_wrap{
-  width: 1000px;
+
+  padding-top: 700px;
+  width: 320px%;
   height: 2000px;
-  background-color: white;
-  margin: 0 auto;
+  background-color: red;
 }
 
 /*新規登録画面のフォーム*/
@@ -158,70 +221,3 @@ header ul li a {
   margin: 20px auto;
 }
 
-@media screen and (max-width: 640px) {
-
-/*header menu*/
-/*nav要素は絶対位置指定にして、ビューの外側に置いて見えなくします。
-nav の中の ul li は横並びを解除して縦組みにレイアウトし直します。*/
-header nav {
-    position: absolute; /*bodyに対しての絶対位置*/
-    right:0;
-    top: -300px; /*通常時はビュー外*/
-    background:rgba(170, 162, 174,.7);
-    width:50%;
-    padding:0 10px;
-    -webkit-transition:.5s ease-in-out; /*transitionで動きを*/
-    -moz-transition:.5s ease-in-out;
-    transition:.5s ease-in-out;
-    text-align:left}
-header ul {margin:0}
-header ul li {
-    display:block;
-    margin:0;
-    border-bottom:dotted 1px #fff;
-    line-height:3}
-header ul li a {display:block}
-header ul li::after {content:''}
-header ul li:last-child {border-bottom:none}
-
-/* Toggle(Button) */
-/*display:noneだったボタンを display:blockにして表示します*/
-#navToggle {display:block}
-
-/* Click Toggle(Button) */
-/*ここから jQueryで header要素に付けた「.openNav」を利用します*/
-/*.openNavが付いた要素内のボタン（#navToggle）内のspanへの指定*/
-/*最初のspanをマイナス45度に*/
-.openNav #navToggle span:nth-child(1) {
-    top: 11px;
-    -webkit-transform:rotate(-45deg);
-    -moz-transform:rotate(-45deg);
-    transform:rotate(-45deg)}
-/*2番目と3番目のspanを45度に*/
-.openNav #navToggle span:nth-child(2),
-.openNav #navToggle span:nth-child(3) {
-    top: 11px;
-    -webkit-transform:rotate(45deg);
-    -moz-transform:rotate(45deg);
-    transform:rotate(45deg)}
-
-/*header menu*/
-/*.openNavが付いた要素の中のnavを 縦方向に351px移動（=表示される）*/
-.openNav nav {
-    -moz-transform: translateY(351px);
-    -webkit-transform: translateY(351px);
-    transform: translateY(351px)}
-}
-
-/*320px以下のデバイスに適用するCSS*/
-/*@media screen and (max-width: 320px) {
-    body {
-        background-color: #68B876;
-    }
-}
-*/
-/*mediaqueryここまで
-*/
-.clear{
-  clear: both;
-}

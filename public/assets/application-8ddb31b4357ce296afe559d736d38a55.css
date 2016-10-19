@@ -138,10 +138,11 @@ header ul li a {
   line-height: 120%;
 }
 #common_wrap{
-  width: 1000px;
+
+  padding-top: 70px;
+  width: 320px%;
   height: 2000px;
-  background-color: white;
-  margin: 0 auto;
+  background-color: red;
 }
 
 /*新規登録画面のフォーム*/
@@ -220,8 +221,4 @@ header ul li:last-child {border-bottom:none}
     }
 }
 */
-/*mediaqueryここまで
-*/
-.clear{
-  clear: both;
-}
+/*mediaqueryここまで*/
