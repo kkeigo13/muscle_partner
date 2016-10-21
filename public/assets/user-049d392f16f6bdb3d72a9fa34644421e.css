@@ -4,7 +4,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 500px;
-  background-attachment: fixed;
 
 }
 
@@ -15,9 +14,9 @@
 
 #main_title{
   position: absolute;
-  top: 40%;
+  top: 50%;
   color: white;
-  font-size: 60px;
+  font-size: 70px;
 }
 
 .graph_area{
@@ -27,6 +26,7 @@
 .prof_area{
   display: table;
   width: 100%;
+  background:fixed;
 }
 
 #icon_image{
@@ -46,21 +46,6 @@
   vertical-align: middle;
   text-align: center;
 }
-#user_data a{
-  font-size: 20px;
-  text-decoration: none;
-  display: inline-block;
-  background-position: 0 0;
-  background-size: 200% auto;
-  transition: .3s;
-  background-image: linear-gradient(to right, rgba(0,0,0,0) 50%, rgba(1,1,1,0.9) 50%);
-}
-
-#user_data a:hover{
-  background-position: -100% 0;
-  color: #fff;
-  padding: 10px;
-}
 .table_row{
   display: table-row;
 }
@@ -69,19 +54,13 @@
   font-size: 20px;
   color: gray;
 }
-.big_bg{
-  background-image: url(images/plus_menu.jpg);
-  background-repeat:no-repeat;
-  background-size: cover;
-  width: 100%;
-}
 
 /*ここからSP版のCSS*/
 @media screen and (max-width: 640px) {
 
 .main_visual{
   width: 100%;
-  background-image: url(images/mainvisual_sp.jpg);
+  background-image: url("images/mainvisual_sp.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 500px;

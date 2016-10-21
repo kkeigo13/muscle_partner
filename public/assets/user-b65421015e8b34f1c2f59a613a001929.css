@@ -51,7 +51,7 @@
   text-decoration: none;
   display: inline-block;
   background-position: 0 0;
-  background-size: 200% auto;
+  background-size: 220% auto;
   transition: .3s;
   background-image: linear-gradient(to right, rgba(0,0,0,0) 50%, rgba(1,1,1,0.9) 50%);
 }

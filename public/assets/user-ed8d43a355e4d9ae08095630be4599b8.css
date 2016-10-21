@@ -70,9 +70,10 @@
   color: gray;
 }
 .big_bg{
-  background-image: url(images/plus_menu.jpg);
+  background-image: url(images/main_viusal.jpg);
   background-repeat:no-repeat;
   background-size: cover;
+  background: fixed;
   width: 100%;
 }
 

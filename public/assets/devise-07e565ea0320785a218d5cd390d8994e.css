@@ -1,0 +1,16 @@
+.devise_wrap{
+  padding-top: 100px;
+  width: 320px;
+}
+
+.field_login{
+  margin: 20px 0;
+}
+
+/*_links.html*/
+
+.link_area a{
+  font-size: 15px;
+  text-decoration: none;
+  color: black;
+}

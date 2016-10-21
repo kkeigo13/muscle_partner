@@ -1,0 +1,23 @@
+.devise_wrap{
+  padding-top: 100px;
+  width: 320px;
+}
+/*ログイン画面*/
+.field_login{
+  margin: 20px 0;
+}
+
+
+/*新規登録画面*/
+
+.sign_up_field{
+  margin: 20px 0;
+}
+
+/*_links.html*/
+
+.link_area a{
+  font-size: 15px;
+  text-decoration: none;
+  color: black;
+}

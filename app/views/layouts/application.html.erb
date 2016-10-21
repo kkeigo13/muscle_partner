@@ -6,6 +6,7 @@
   <%= stylesheet_link_tag    'menu', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag    'tweet', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag    'user', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'devise', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -19,6 +20,7 @@
 </head>
 <body>
 <header>
+<% if yield(:header).empty? %>
   <div id="big_head">
     <% if user_signed_in? %>
       <div id="navToggle">
@@ -49,12 +51,19 @@
 
     </nav>
   </div>
+<% else %>
+  <%= yield :header %>
+<% end %>
 </header>
 
   <%= yield %>
 
 <footer>
-  <p>ここはfooter！</p>
+  <% if yield(:footer).empty? %>
+  <p>ここはfooterだよ</p>
+  <% else %>
+    <%= yield :footer %>
+  <% end %>
 </footer>
 
 </body>

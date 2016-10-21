@@ -5,25 +5,36 @@
       muscle partner
     </div>
 </div>
-<div id="common_wrap">
+<div class="big_bg">
+  <div class="common_wrap">
 
-  <div class="prof_area">
-    <div class="table_row">
-      <div id="icon_image">
-        <%= image_tag current_user.icon_image %>
+    <div class="prof_area">
+      <div class="table_row">
+        <div id="icon_image">
+        <% if current_user.icon_image present? %>
+          <%= image_tag current_user.icon_image %>
+        <% else %>
+          <%= image_tag("assets/images/no-images.png") %>
+        <% end %>
+        </div>
+        <div id="user_data">
+          <%= current_user.nick_name %>
+          さんの筋トレデータ<br>
+          <a href="/tweet/new/">--筋トレを始める</a><br>
+          <a href="/menu/">--メニューを追加する</a><br>
+          <a href="/tweet/">--筋トレの軌跡</a>
+        </div>
       </div>
-      <div id="user_data">
-        <%= current_user.nick_name %>
-        さんの筋トレデータ
+      <div class="table_row prof_a">
+        <%= link_to 'ユーザー情報編集', edit_user_registration_path %>
       </div>
     </div>
-    <div class="table_row prof_a">
-      <%= link_to 'ユーザー情報編集', edit_user_registration_path %>
-    </div>
   </div>
-
-  <div class="graph_area">
-    ここはグラフエリア
-  </div>
-
 </div>
+
+    <div class="graph_area">
+      ここはグラフエリア
+    </div>
+
+
+

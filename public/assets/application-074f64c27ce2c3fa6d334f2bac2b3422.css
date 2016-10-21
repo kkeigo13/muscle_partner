@@ -63,7 +63,8 @@ footer{
 /*header footer*/
 
 footer {
-
+  height: 50px;
+  background-color: gray;
 }
 /*header menu*/
 header {
@@ -139,6 +140,19 @@ header ul li a {
   padding: 20px;
 }
 
+/*新規登録画面のフォーム*/
+
+.sign_up_h2{
+  font-size: 40px;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.sign_up_field{
+  width: 40%;
+  text-align: center;
+  margin: 20px auto;
+}
 
 @media screen and (max-width: 640px) {
 

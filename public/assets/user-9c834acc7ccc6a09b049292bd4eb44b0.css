@@ -50,16 +50,11 @@
   font-size: 20px;
   text-decoration: none;
   display: inline-block;
-  background-position: 0 0;
-  background-size: 200% auto;
-  transition: .3s;
-  background-image: linear-gradient(to right, rgba(0,0,0,0) 50%, rgba(1,1,1,0.9) 50%);
-}
-
-#user_data a:hover{
-  background-position: -100% 0;
-  color: #fff;
-  padding: 10px;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  transition: 0.5s;
 }
 .table_row{
   display: table-row;
@@ -69,11 +64,13 @@
   font-size: 20px;
   color: gray;
 }
-.big_bg{
-  background-image: url(images/plus_menu.jpg);
-  background-repeat:no-repeat;
-  background-size: cover;
-  width: 100%;
+
+.prof_a a:hover {
+  -webkit-transform: scale(1.5,1.5);
+  -moz-transform: scale(1.5,1.5);
+  -o-transform: scale(1.5,1.5);
+  -ms-transform: scale(1.5,1.5);
+  transform: scale(1.5,1.5);
 }
 
 /*ここからSP版のCSS*/
@@ -81,7 +78,7 @@
 
 .main_visual{
   width: 100%;
-  background-image: url(images/mainvisual_sp.jpg);
+  background-image: url("images/mainvisual_sp.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 500px;

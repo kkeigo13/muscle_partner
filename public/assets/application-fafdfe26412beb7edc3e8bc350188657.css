@@ -63,7 +63,8 @@ footer{
 /*header footer*/
 
 footer {
-
+  height: 50px;
+  background-color: gray;
 }
 /*header menu*/
 header {

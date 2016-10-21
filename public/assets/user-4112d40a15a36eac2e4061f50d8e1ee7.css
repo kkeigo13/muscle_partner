@@ -70,9 +70,10 @@
   color: gray;
 }
 .big_bg{
-  background-image: url(images/plus_menu.jpg);
+  background-image: url(images/main_viusal.jpg)
   background-repeat:no-repeat;
   background-size: cover;
+  background: fixed;
   width: 100%;
 }
 
@@ -81,7 +82,7 @@
 
 .main_visual{
   width: 100%;
-  background-image: url(images/mainvisual_sp.jpg);
+  background-image: url("images/mainvisual_sp.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 500px;

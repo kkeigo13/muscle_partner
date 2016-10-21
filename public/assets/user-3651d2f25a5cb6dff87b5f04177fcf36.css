@@ -69,19 +69,14 @@
   font-size: 20px;
   color: gray;
 }
-.big_bg{
-  background-image: url(images/plus_menu.jpg);
-  background-repeat:no-repeat;
-  background-size: cover;
-  width: 100%;
-}
+
 
 /*ここからSP版のCSS*/
 @media screen and (max-width: 640px) {
 
 .main_visual{
   width: 100%;
-  background-image: url(images/mainvisual_sp.jpg);
+  background-image: url("images/mainvisual_sp.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 500px;
