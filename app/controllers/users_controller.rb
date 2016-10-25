@@ -37,7 +37,6 @@ class UsersController < ApplicationController
 
         end
       @menu_chart << @chart
-      binding.pry
     end
 
   end
