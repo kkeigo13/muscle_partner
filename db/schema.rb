@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161025051036) do
+ActiveRecord::Schema.define(version: 20161025053706) do
 
   create_table "menus", force: :cascade do |t|
     t.datetime "created_at",               null: false
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 20161025051036) do
     t.string   "icon_image_content_type", limit: 255
     t.integer  "icon_image_file_size",    limit: 4
     t.datetime "icon_image_updated_at"
+    t.string   "nick_name",               limit: 255
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

@@ -5,6 +5,7 @@
   background-repeat: repeat;
   background-size: 300px;
   padding:60px 0;
+
 }
 /*ログイン画面*/
 .field_login{
@@ -204,9 +205,14 @@ input:-moz-placeholder {
 }
 
 .file_icon{
-    font-size: 15px;
+    font-size: 13px;
     margin: 0 0 20px 0;
     color: #bababa;
+    background: linear-gradient(#1f2124, #27292c);
+    border: 1px solid #222;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.1);
+    border-radius: 0.3em;
+    width: 100%;
 }
 
 #tweet_menu_name{
