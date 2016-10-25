@@ -1,0 +1,830 @@
+@charset "UTF-8";.devise_wrap{
+  width: 100%;
+  margin: 0 auto;
+  background-image: url(images/brick_bg.jpg);
+  background-repeat: repeat;
+  background-size: 300px;
+  padding:60px 0;
+
+}
+/*ログイン画面*/
+.field_login{
+  margin: 20px 0;
+}
+
+
+/*新規登録画面*/
+
+.sign_up_field{
+  margin: 20px 0;
+}
+
+/*_links.html*/
+
+.link_area a{
+  font-size: 15px;
+  text-decoration: none;
+  color: black;
+}
+
+.devise_form {
+  background:rgba(17,17,17,0.95);
+  width:300px;
+  margin:30px auto;
+  border-radius:0.4em;
+  border:1px solid #191919;
+  overflow:hidden;
+  position:relative;
+  box-shadow: 0 5px 10px 5px rgba(0,0,0,0.2);
+}
+
+.devise_form:after {
+  content:"";
+  display:block;
+  position:absolute;
+  height:1px;
+  width:100px;
+  left:20%;
+  background:linear-gradient(left, #111, #444, #b6b6b8, #444, #111);
+  top:0;
+}
+
+.devise_form:before {
+  content:"";
+  display:block;
+  position:absolute;
+  width:8px;
+  height:5px;
+  border-radius:50%;
+  left:34%;
+  top:-7px;
+  box-shadow: 0 0 6px 4px #fff;
+}
+
+.inset {
+  padding:20px;
+  border-top:1px solid #19191a;
+}
+
+.devise_form h2 {
+  font-size:18px;
+  text-shadow:0 1px 0 black;
+  text-align:center;
+  padding:15px 0;
+  border-bottom:1px solid rgba(0,0,0,1);
+  position:relative;
+}
+
+.devise_form h2:after {
+  content:"";
+  display:block;
+  width:250px;
+  height:100px;
+  position:absolute;
+  top:0;
+  left:50px;
+  pointer-events:none;
+  transform:rotate(70deg);
+  -webkit-transform: rotate(70deg);
+  background:linear-gradient(50deg, rgba(255,255,255,0.15), rgba(0,0,0,0));
+   background-image: -webkit-linear-gradient(50deg, rgba(255,255,255,0.05), rgba(0,0,0,0)); /* For Safari */
+
+}
+
+.login {
+  color:#bababa;
+  padding-bottom:9px;
+}
+
+.login_input[type=email],
+.login_input[type=password],
+.login_input[type=string],
+.login_input[type=number],
+.login_input[type=date],
+.login_input[type=text]{
+  width:100%;
+  padding:0px 5px;
+  background:linear-gradient(#1f2124, #27292c);
+  border:1px solid #222;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.1);
+  border-radius:0.3em;
+  margin-bottom:20px;
+  height: 30px;
+  color: white;
+  font-size: 15px;
+}
+
+.login [for=remember]{
+  color:white;
+  display:inline-block;
+  padding-bottom:0;
+  padding-top:5px;
+}
+
+.login_input[type=checkbox] {
+  display:inline-block;
+  vertical-align:top;
+}
+
+.p-container {
+  padding: 40px 20px 20px 0px;
+}
+
+.p-container:after {
+  clear:both;
+  display:table;
+  content:"";
+}
+
+.p-container span {
+  display:block;
+  color:#0d93ff;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.p-container span a{
+  text-decoration: none;
+  font-size: 12px;
+  color: #0d93ff;
+}
+
+.login_input[type=submit] {
+  padding:5px 20px;
+  border:1px solid rgba(0,0,0,0.4);
+  text-shadow:0 -1px 0 rgba(0,0,0,0.4);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.3),
+    inset 0 10px 10px rgba(255,255,255,0.1);
+  border-radius:0.3em;
+  background:#0184ff;
+  color:white;
+  float:right;
+  font-weight:bold;
+  cursor:pointer;
+  font-size:13px;
+}
+
+.login_input[type=submit]:hover {
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.3),
+    inset 0 -10px 10px rgba(255,255,255,0.1);
+}
+
+.login_input[type=email]:hover,
+.login_input[type=password]:hover,
+.login_input[type=text]:hover,
+.login_input[type=string]:hover,
+.login_input[type=date]:hover,
+.login_input[type=number]:hover,
+.login :hover ~ input[type=email],
+.login :hover ~ input[type=password],
+.login :hover ~ input[type=string],
+.login :hover ~ input[type=date],
+.login :hover ~ input[type=number],
+.login :hover ~ input[type=text]{
+  background:#27292c;
+}
+* { box-sizing: border-box; padding:0; margin: 0; }
+
+.login_h2{
+  color: white;
+}
+
+.login_em{
+  color: #bababa;
+}
+input::-webkit-input-placeholder {
+ color: #bababa;
+ font-size:10px;
+}
+input:-moz-placeholder {
+ color: #bababa;
+ font-size:10px;
+}
+
+.file_icon{
+    font-size: 13px;
+    margin: 0 0 20px 0;
+    color: #bababa;
+    background: linear-gradient(#1f2124, #27292c);
+    border: 1px solid #222;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.1);
+    border-radius: 0.3em;
+    width: 100%;
+}
+
+#tweet_menu_name{
+  color: #bababa;
+  background:black;
+  font-size: 15px;
+}
+select{
+  color: #bababa;
+  background: black;
+  font-size: 15px;
+  width: 80%;
+  margin-bottom: 20px;
+}
+.login_h1{
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  margin: 20px;
+}
+.sub_title{
+  font-size: 15px;
+  color: white;
+  text-align: center;
+}
+.all_menus{
+  padding: 50px 0;
+  color: white;
+}
+
+.all_menus a{
+  font-size: 10px;
+  text-decoration: none;
+  color: #bababa;
+}
+.all_menus li{
+  list-style: none;
+  line-height: 250%;
+}
+#menu_bk{
+  background-image: url(images/menu_back.jpg);
+  height: inherit;
+  background-size: cover;
+}
+.menu_span{
+  color:white;
+  position: relative;
+  display: inline-block;
+  transition: .3s;
+}
+.menu_span::after{
+
+}
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  width: 0;
+  height: 1px;
+  background-color: #2ecc71;
+  transition: .3s;
+}
+
+.menu_span:hover::after {
+  width: 100%;
+}
+
+
+.complete_tweet{
+  color: white;
+  width: 640px;
+  margin: 0 auto;
+}
+
+.complete_tweet a{
+  text-decoration: none;
+  font-size: 20px;
+}
+
+#tweet_bg_wrap{
+
+}
+.tweet_wrap{
+  width: 640px;
+  color: white;
+  font-size: 20px;
+  margin: 0 auto;
+  background-color: rgba(1,1,1,0.5);
+  padding-top: 50px;
+  padding: 20px;
+}
+
+.tweet_wrap a{
+  text-decoration: none;
+  color:#bababa;
+  font-size: 15px;
+}
+.line{
+  width: 100%;
+  border-bottom: 2px white solid;
+  margin-bottom: 20px
+}
+.tweet_wrap span{
+  font-size: 15px;
+  color: #bababa;
+}
+.tweet_wrap h2{
+  display: block;
+  margin: 20px auto;
+  font-size: 25px;
+  font-family: 'New Gulim', 'Dotum',sans-serif;
+  border-left: solid #bababa 10px;
+  border-bottom: solid #bababa 1px;
+}
+.pagination{
+  display: table;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 3px;
+  border: solid #bababa 2px;
+}
+.pagination span{
+  background: white;
+  border-left: #bababa solid 2px;
+  border-right: #bababa solid 2px;
+  display: table-cell;
+  padding: 5px;
+  width: 40px;
+}
+
+.pagination span a{
+  color:black;
+}
+.next{
+  visibility: hidden;
+  display: none  !important;
+}
+.last{
+  visibility: hidden;
+  display: none !important;
+}
+.first{
+  display: none !important;
+}
+.prev{
+  display: none !important;
+}
+.tweet_bg{
+  background-image: url(images/wood_bg.jpg);
+  background-repeat: repeat;
+  background-size: 300px;
+  height: 100%;
+}
+@media screen and (max-width: 640px) {
+.tweet_wrap{
+  font-size: 15px;
+  width: 100%;
+}
+.tweet_wrap h2{
+  font-size: 17px;
+}
+
+
+}
+
+.main_visual{
+  width: 100%;
+  background-image: url("images/mainvisual.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  background-attachment: fixed;
+
+}
+
+.layer{
+  background-color:rgba(255,255,255,0.2);
+  height: 500px;
+}
+
+#main_title{
+  position: absolute;
+  top: 40%;
+  color: white;
+  font-size: 60px;
+  margin-left: 20px;
+}
+
+.graph_bg{
+  width: 100%;
+  background-image: url(images/graph_bg.png);
+
+}
+.graph_area{
+  background-color: gray;
+  width: 1000px;
+  margin: 0 auto;
+  background-color: rgba(255,255,255,0.2);
+  padding: 20px;
+}
+#graph_inner{
+  width: 700px;
+  margin: 0 auto;
+}
+
+.graph_area text{
+  font-size: 10px;
+}
+.prof_area{
+  display: table;
+  width: 100%;
+}
+
+#icon_image{
+  padding: 20px;
+  display: table-cell;
+  width: 20%;
+}
+
+#icon_image img{
+  width: 80%;
+  margin: 20px;
+}
+#user_data{
+  display: table-cell;
+  width: 80%;
+  font-size: 35px;
+  vertical-align: middle;
+  text-align: center;
+}
+#user_data a{
+  font-size: 20px;
+  text-decoration: none;
+  display: inline-block;
+  background-position: 0 0;
+  background-size: 200% auto;
+  transition: .3s;
+  background-image: linear-gradient(to right, rgba(0,0,0,0) 50%, rgba(1,1,1,0.9) 50%);
+}
+
+#user_data a:hover{
+  background-position: -100% 0;
+  color: #fff;
+  padding: 10px;
+}
+.table_row{
+  display: table-row;
+}
+.prof_a a{
+  text-decoration: none;
+  font-size: 20px;
+  color: gray;
+}
+.big_bg{
+  background-image: url(images/plus_menu_2.jpg);
+  background-repeat:no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+.common_wrap{
+  width: 1000px;
+  height: 400px;
+  background-color: rgba(255,255,255,0.8);
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+/*ここからSP版のCSS*/
+@media screen and (max-width: 640px) {
+.big_bg {
+    background-image: url(images/plus_menu_sp.jpg);
+  }
+.common_wrap{
+  width: 100% !important;
+  height: 600px;
+}
+.table_row {
+    display: table-row;
+    text-align: center;
+}
+#icon_image{
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+#icon_image img{
+  width: 50%;
+  margin: 0 auto;
+}
+#user_data{
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  vertical-align: middle;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.main_visual{
+  width: 100%;
+  background-image: url(images/mainvisual_sp.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 270px;
+
+}
+
+#main_title{
+  position: absolute;
+  top: 25%;
+  color: white;
+  font-size: 30px;
+}
+
+  }
+
+/*
+
+
+ */
+/* line 23, /Users/keigo/muscle_partner/app/assets/stylesheets/application.css.scss */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 32, /Users/keigo/muscle_partner/app/assets/stylesheets/application.css.scss */
+html {
+  height: 100%;
+}
+
+/* line 36, /Users/keigo/muscle_partner/app/assets/stylesheets/application.css.scss */
+body {
+  height: 100%;
+}
+
+/*header{
+  width: 100%;
+  height: 40px;
+  background-color: blue;
+  color:white;
+}
+
+footer{
+  width: 100%;
+  height: 40px;
+  background-color: blue;
+  color:white;
+}:*/
+/*ここからハンバーガーメニュー含めたヘッダーの記述*/
+/* line 54, /Users/keigo/muscle_partner/app/assets/stylesheets/application.css.scss */
+#navToggle {
+  display: none;
+  /*通常時は非表示にしておきます*/
+  position: absolute;
+  /*bodyに対しての絶対位置指定です*/
+  right: 13px;
+  top: 13px;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+
+/* line 62, /Users/keigo/muscle_partner/app/assets/stylesheets/application.css.scss */
+#navToggle div {
+  position: relative;
+}
+
+/*spanの絶対位置指定の親にします*/
+/* line 63, /Users/keigo/muscle_partner/app/assets/stylesheets/application.css.scss */
+#navToggle span {
+  display: block;
+  position: absolute;
+  /*#navToggle div に対して*/
+  width: 100%;
+  border-bottom: solid 3px #fff;
+  -webkit-transition: .35s ease-in-out;
+  -moz-transition: .35s ease-in-out;
+  transition: .35s ease-in-out;
+}
+
+/* line 71, /Users/keigo/muscle_partner/app/assets/stylesheets/application.css.scss */
+#navToggle span:nth-child(1) {
+  top: 0;
+}
+
+/* line 72, /Users/keigo/muscle_partner/app/assets/stylesheets/application.css.scss */
+#navToggle span:nth-child(2) {
+  top: 11px;
+}
+
+/* line 73, /Users/keigo/muscle_partner/app/assets/stylesheets/application.css.scss */
+#navToggle span:nth-child(3) {
+  top: 22px;
+}
+
+/*header footer*/
+/*header menu*/
+/* line 84, /Users/keigo/muscle_partner/app/assets/stylesheets/application.css.scss */
+header {
+  display: table;
+  font-size: 0;
+  /*ul,liが親のfont-sizeを継承して隙間が空くのをリセット*/
+  line-height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
+/* line 92, /Users/keigo/muscle_partner/app/assets/stylesheets/application.css.scss */
+header h1, nav {
+  display: table-cell;
+}
+
+/* line 94, /Users/keigo/muscle_partner/app/assets/stylesheets/application.css.scss */
+nav {
+  text-align: right;
+  vertical-align: middle;
+}
+
+/* line 97, /Users/keigo/muscle_partner/app/assets/stylesheets/application.css.scss */
+header h1 a img {
+  height: 40px;
+  margin: 10px;
+}
+
+/* line 100, /Users/keigo/muscle_partner/app/assets/stylesheets/application.css.scss */
+header ul {
+  font-size: 13px;
+  line-height: 1;
+  margin: 0 10px 10px 0;
+}
+
+/* line 104, /Users/keigo/muscle_partner/app/assets/stylesheets/application.css.scss */
+header ul li {
+  margin-left: 3px;
+  display: inline-block;
+  text-align: right;
+}
+
+/* line 109, /Users/keigo/muscle_partner/app/assets/stylesheets/application.css.scss */
+header ul li::after {
+  content: ' |';
+  color: white;
+}
+
+/* line 113, /Users/keigo/muscle_partner/app/assets/stylesheets/application.css.scss */
+header ul li:last-child::after {
+  content: '';
+}
+
+/* line 116, /Users/keigo/muscle_partner/app/assets/stylesheets/application.css.scss */
+header ul li a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* line 122, /Users/keigo/muscle_partner/app/assets/stylesheets/application.css.scss */
+#big_head {
+  background-color: rgba(165, 165, 165, 0.8);
+  display: table;
+  width: 100%;
+  height: 50px;
+}
+
+/* line 132, /Users/keigo/muscle_partner/app/assets/stylesheets/application.css.scss */
+#header_left_out {
+  display: table-cell;
+  top: 20px;
+  left: 50px;
+  position: absolute;
+}
+
+/* line 139, /Users/keigo/muscle_partner/app/assets/stylesheets/application.css.scss */
+#header_left_out a {
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+/*ヘッダーの記述ここまで*/
+/* line 146, /Users/keigo/muscle_partner/app/assets/stylesheets/application.css.scss */
+* {
+  font-size: 30px;
+  line-height: 120%;
+}
+
+/* line 150, /Users/keigo/muscle_partner/app/assets/stylesheets/application.css.scss */
+.common_wrap {
+  width: 1000px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 0 auto;
+  padding: 20px;
+}
+
+@media screen and (max-width: 640px) {
+  /*header menu*/
+  /*nav要素は絶対位置指定にして、ビューの外側に置いて見えなくします。
+  nav の中の ul li は横並びを解除して縦組みにレイアウトし直します。*/
+  /* line 164, /Users/keigo/muscle_partner/app/assets/stylesheets/application.css.scss */
+  header nav {
+    position: absolute;
+    /*bodyに対しての絶対位置*/
+    right: 0;
+    top: -300px;
+    /*通常時はビュー外*/
+    background: rgba(170, 162, 174, 0.7);
+    width: 50%;
+    padding: 0 10px;
+    -webkit-transition: .5s ease-in-out;
+    /*transitionで動きを*/
+    -moz-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    text-align: left;
+  }
+
+  /* line 175, /Users/keigo/muscle_partner/app/assets/stylesheets/application.css.scss */
+  header ul {
+    margin: 0;
+  }
+
+  /* line 176, /Users/keigo/muscle_partner/app/assets/stylesheets/application.css.scss */
+  header ul li {
+    display: block;
+    margin: 0;
+    border-bottom: dotted 1px #fff;
+    line-height: 3;
+  }
+
+  /* line 181, /Users/keigo/muscle_partner/app/assets/stylesheets/application.css.scss */
+  header ul li a {
+    display: block;
+  }
+
+  /* line 182, /Users/keigo/muscle_partner/app/assets/stylesheets/application.css.scss */
+  header ul li::after {
+    content: '';
+  }
+
+  /* line 183, /Users/keigo/muscle_partner/app/assets/stylesheets/application.css.scss */
+  header ul li:last-child {
+    border-bottom: none;
+  }
+
+  /* Toggle(Button) */
+  /*display:noneだったボタンを display:blockにして表示します*/
+  /* line 187, /Users/keigo/muscle_partner/app/assets/stylesheets/application.css.scss */
+  #navToggle {
+    display: block;
+  }
+
+  /* Click Toggle(Button) */
+  /*ここから jQueryで header要素に付けた「.openNav」を利用します*/
+  /*.openNavが付いた要素内のボタン（#navToggle）内のspanへの指定*/
+  /*最初のspanをマイナス45度に*/
+  /* line 193, /Users/keigo/muscle_partner/app/assets/stylesheets/application.css.scss */
+  .openNav #navToggle span:nth-child(1) {
+    top: 11px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  /*2番目と3番目のspanを45度に*/
+  /* line 200, /Users/keigo/muscle_partner/app/assets/stylesheets/application.css.scss */
+  .openNav #navToggle span:nth-child(2),
+  .openNav #navToggle span:nth-child(3) {
+    top: 11px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /*header menu*/
+  /*.openNavが付いた要素の中のnavを 縦方向に351px移動（=表示される）*/
+  /* line 208, /Users/keigo/muscle_partner/app/assets/stylesheets/application.css.scss */
+  .openNav nav {
+    -moz-transform: translateY(351px);
+    -webkit-transform: translateY(351px);
+    transform: translateY(351px);
+  }
+}
+/*320px以下のデバイスに適用するCSS*/
+/*@media screen and (max-width: 320px) {
+    body {
+        background-color: #68B876;
+    }
+}
+*/
+/*mediaqueryここまで
+*/
+/* line 223, /Users/keigo/muscle_partner/app/assets/stylesheets/application.css.scss */
+.clear {
+  clear: both;
+}
