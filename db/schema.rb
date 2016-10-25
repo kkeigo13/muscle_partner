@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161023104133) do
+ActiveRecord::Schema.define(version: 20161025051036) do
 
   create_table "menus", force: :cascade do |t|
     t.datetime "created_at",               null: false
@@ -42,9 +42,8 @@ ActiveRecord::Schema.define(version: 20161023104133) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip",      limit: 255
     t.string   "last_sign_in_ip",         limit: 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "nick_name",               limit: 255
+    t.datetime "created_at",                                       null: false
+    t.datetime "updated_at",                                       null: false
     t.string   "icon_image_file_name",    limit: 255
     t.string   "icon_image_content_type", limit: 255
     t.integer  "icon_image_file_size",    limit: 4
