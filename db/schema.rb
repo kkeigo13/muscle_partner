@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161025053706) do
+ActiveRecord::Schema.define(version: 20161025051036) do
 
   create_table "menus", force: :cascade do |t|
     t.datetime "created_at",               null: false
