@@ -1,20 +1,24 @@
-<div>
-  </*% if menus.errors[:menu].any? %>
-  </*% menu.errors.full_messages %>
-  </*% end %>
-  <%= form_tag @menu, remote: true do %>
-    <input placeholder="新しいメニュー" type="string" name="menu" id="menu_name">
+<div class="devise_wrap" id="menu_bk">
+  <div class="inset devise_form">
+    <h2 class="login_h2">新しくメニューを追加する</h2>
+    <div>
 
-    <input type="submit" value="SENT">
-  <% end %>
+      <%= form_for @menu, remote: true do |f| %>
+        <%= f.text_field :menu, placeholder: "新しいメニュー", name: "menu", id: "menu_name", class: "login_input" %>
+        <%= f.submit "追加", class: "login_input" %>
+      <% end %>
 
 
+    </div>
+
+    <div class="p-container">
+      <p><span><%= current_user.nick_name %>さんのメニュー一覧</span></p>
+      <ul class="all_menus">
+        <%= render @menus %>
+
+      </ul>
+    </div>
+  </div>
 </div>
 
-<div>
-  <p>あなたのメニュー一覧</p>
-  <ul class="all_menus">
-    <%= render @menus %>
-
-  </ul>
-</div>
+<% content_for :footer do %> <% end %>

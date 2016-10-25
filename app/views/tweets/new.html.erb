@@ -1,12 +1,19 @@
-<div>
-  <%= form_for @tweet do |f| %>
-    <%= f.date_field :work_date, placeholder: '日付' %>
-    <%= f.collection_select :menu_name, @menu, :menu, :menu, :include_blank => "メニューを選択" %>
+<div class="devise_wrap tweet_bg">
+  <div class="inset devise_form">
+  <h2 class="login_h2">Today's Work!</h2>
+      <%= form_for @tweet do |f| %>
+        <%= f.label :日付を選択, class: "login" %>
+        <%= f.date_field :work_date, placeholder: '日付',class: "login_input" %>
+        <%= f.label :メニューを選択, class: "login" %>
+        <%= f.collection_select :menu_name, @menu, :menu, :menu, :include_blank => "リストから選択" %><br>
+        <%= f.label :回数（半角入力）, class: "login" %>
+        <%= f.number_field :menu_count, placeholder: '例）10',class: "login_input" %>
+        <%= f.label :備考, class: "login" %>
+        <%= f.text_field :remarks, placeholder: '例）とても疲れた', cols: 20, rows: 5,class: "login_input" %>
+        <%= button_tag type: "submit", class: "login_input" do %>記録する<% end %>
+    <% end %>
 
-    <%= f.number_field :count, placeholder: '回数(半角入力)' %>
-    <%= f.text_field :remarks, placeholder: '備考', cols: 20, rows: 5 %>
-    <%= button_tag type: "submit" do %>投稿する<% end %>
-  <% end %>
 
-
+  </div>
 </div>
+<% content_for :footer do %> <% end %>

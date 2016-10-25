@@ -11,17 +11,17 @@
     <div class="prof_area">
       <div class="table_row">
         <div id="icon_image">
-        <% if current_user.icon_image present? %>
+        <% if current_user.icon_image.present? %>
           <%= image_tag current_user.icon_image %>
         <% else %>
-          <%= image_tag("assets/images/no-images.png") %>
+          <%= image_tag 'no-images.png', alt: "プロフ画像" %>
         <% end %>
         </div>
         <div id="user_data">
           <%= current_user.nick_name %>
           さんの筋トレデータ<br>
           <a href="/tweet/new/">--筋トレを始める</a><br>
-          <a href="/menu/">--メニューを追加する</a><br>
+          <a href="/menus/">--メニューを追加する</a><br>
           <a href="/tweet/">--筋トレの軌跡</a>
         </div>
       </div>
@@ -32,9 +32,29 @@
   </div>
 </div>
 
+<div class ="graph_bg">
     <div class="graph_area">
-      ここはグラフエリア
-    </div>
+      <div id="graph_inner">
+        <% @menu_chart_d.each.with_index do |chart, index| %>
 
+          <% if chart.empty? %>
+
+          <% else %>
+            <%= line_chart chart, :library => {:curveType => "none", :backgroundColor => "#3A3A3A"}   %>
+          <% end %>
+        <% end %>
+        <% @menu_chart.each do |chart| %>
+          <% if chart.empty? %>
+
+          <% else %>
+          <%= @menu_name %>
+            <%= line_chart chart, :library => {:curveType => "none", :backgroundColor => "#3A3A3A"}  %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+</div>
+
+<% content_for :footer do %> <% end %>
 
 

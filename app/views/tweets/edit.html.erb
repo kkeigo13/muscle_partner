@@ -1,7 +1,13 @@
-<%= form_tag("/tweet/#{@tweet.id}", method: :patch ) do %>
-    <input placeholder="日付" type="date" name="work_date" value="<%= @tweet.work_date %>" >
-    <input placeholder="メニュー" type="string" name="menu_name" value="<%= @tweet.menu_name %>">
-    <input placeholder="回数(半角入力)" type="integer" name="count" value="<%= @tweet.count %>">回
-    <textarea cols="20" name="remarks" placeholder="備考" rows="5" value="<%= @tweet.remarks %>"></textarea>
-    <input type="submit" value="SENT">
-<% end %>
+<div class="devise_wrap tweet_bg">
+  <div class="inset devise_form">
+    <h2 class="login_h2">UpDate works!</h2>
+    <%= form_for @tweet do |f| %>
+    <%= f.date_field :work_date, value: @tweet.work_date, class: "login_input" %>
+    <%= f.collection_select :menu_name, @menu, :menu, :menu, value: @tweet.menu_name %>
+    <%= f.number_field :menu_count, value: @tweet.menu_count, class: "login_input" %>回
+    <%= f.text_field :remarks, cols: 20, rows: 5, value: @tweet.remarks, class: "login_input" %>
+    <%= button_tag type: "submit", class: "login_input" do %>更新する<% end %>
+    <% end %>
+  </div>
+</div>
+<% content_for :footer do %> <% end %>

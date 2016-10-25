@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161010122320) do
+ActiveRecord::Schema.define(version: 20161023104133) do
 
   create_table "menus", force: :cascade do |t|
     t.datetime "created_at",               null: false
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20161010122320) do
     t.datetime "updated_at",               null: false
     t.integer  "user_id",    limit: 4,     null: false
     t.string   "menu_name",  limit: 255,   null: false
-    t.integer  "count",      limit: 4,     null: false
+    t.integer  "menu_count", limit: 4,     null: false
     t.text     "remarks",    limit: 65535, null: false
     t.date     "work_date",                null: false
   end

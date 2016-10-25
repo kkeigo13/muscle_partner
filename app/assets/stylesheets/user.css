@@ -18,11 +18,28 @@
   top: 40%;
   color: white;
   font-size: 60px;
+  margin-left: 20px;
 }
 
+.graph_bg{
+  width: 100%;
+  background-image: url(images/graph_bg.png);
+
+}
 .graph_area{
   background-color: gray;
-  height: 1000px;
+  width: 1000px;
+  margin: 0 auto;
+  background-color: rgba(255,255,255,0.2);
+  padding: 20px;
+}
+#graph_inner{
+  width: 700px;
+  margin: 0 auto;
+}
+
+.graph_area text{
+  font-size: 10px;
 }
 .prof_area{
   display: table;
@@ -70,7 +87,7 @@
   color: gray;
 }
 .big_bg{
-  background-image: url(images/plus_menu.jpg);
+  background-image: url(images/plus_menu_2.jpg);
   background-repeat:no-repeat;
   background-size: cover;
   width: 100%;

@@ -1,23 +1,28 @@
 
 
-<div>
+<div class="devise_wrap tweet_bg" id="tweet_bg_wrap">
+    <div class="tweet_wrap">
+        <h2>〜<%= current_user.nick_name %>さんの筋トレの軌跡〜</h2>
+    <% @tweet.each do |tweet|%>
+        <% if tweet.present? %>
+        <%= tweet.work_date %>
+        のトレーニング<br>
 
-<% @tweet.each do |tweet|%>
-  <%  if tweet.user_id == current_user.id %>
-    <% if tweet.present? %>
-    <%= tweet.work_date %>
-    のトレーニング<br>
+        <%= tweet.menu_name  %>を
+        <%= tweet.menu_count %>回やりました。
+        <%= link_to '編集', "/tweet/#{tweet.id}/edit", method: :get %>
+        <%= link_to '削除', "/tweet/#{tweet.id}", method: :delete %><br>
+        <% if tweet.remarks.present? %>
+            <span>コメント:</span><%= tweet.remarks %>
+        <% end %>
+        <div class="line"></div>
+        <% else %>
+        まだトレーニングがありません。
+        <% end %>
 
-    <%= tweet.menu_name  %>を
-    <%= tweet.count %>回やりました。
-    <%= link_to '編集', "/tweet/#{tweet.id}/edit", method: :get %>
-    <%= link_to '削除', "/tweet/#{tweet.id}", method: :delete %><br>
-    <% else %>
-    今日は
     <% end %>
-
-  <% end %>
-<% end %>
-<%= paginate(@tweet) %>
+    <%= paginate(@tweet) %>
+    </div>
 </div>
 
+<% content_for :footer do %> <% end %>

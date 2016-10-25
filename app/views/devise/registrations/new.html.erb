@@ -1,41 +1,46 @@
-<div class="common_wrap devise_wrap">
+<% content_for :header do %> <% end %>
+<div class="devise_wrap">
 
-  <h2 class="sign_up_h2">新規登録</h2>
 
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html:{class: 'devise_form'}) do |f| %>
     <%= devise_error_messages! %>
+    <div class="inset">
+      <h2 class="login_h2">新規登録</h2>
+      <p>
+          <%= f.label :ニックネーム, class: "login" %><em class="login_em">(10文字以内)</em>
+          <%= f.text_field :nick_name, autofocus: true, maxlength: "10", placeholder: "ニックネーム（必須）" ,size: "20",class: "login_input" %>
+      </p>
+      <p>
+          <%= f.label :アイコン画像, class: "login" %>
+          <%= f.file_field :icon_image ,class: "file_icon login_input" %>
+      </p>
 
-    <div class="field  sign_up_field">
-        <%= f.label :ニックネーム %><em>(10文字以内)</em><br />
-        <%= f.text_field :nick_name, autofocus: true, maxlength: "10", placeholder: "ニックネーム（必須）" ,size: "20" %>
-    </div>
-    <div class="field sign_up_field">
-        <%= f.label :アイコン画像 %>
-        <%= f.file_field :icon_image %>
-    </div>
+      <p>
+        <%= f.label :メールアドレス, class: "login" %>
+        <%= f.email_field :email,class: "login_input" %>
+      </p>
 
-    <div class="field sign_up_field">
-      <%= f.label :メールアドレス %><br />
-      <%= f.email_field :email %>
-    </div>
+      <p>
+        <%= f.label :パスワード, class: "login" %>
+        <% if @minimum_password_length %>
+        <em class="login_em">(<%= @minimum_password_length %> 文字以上)</em>
+        <% end %>
+        <%= f.password_field :password,class: "login_input" %>
+      </p>
 
-    <div class="field sign_up_field">
-      <%= f.label :パスワード %>
-      <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> 文字以上)</em>
-      <% end %><br />
-      <%= f.password_field :password %>
-    </div>
+      <p>
+        <%= f.label :パスワード（確認）, class: "login" %>
+        <%= f.password_field :password_confirmation,class: "login_input" %>
+      </p>
 
-    <div class="field sign_up_field">
-      <%= f.label :パスワード（確認） %><br />
-      <%= f.password_field :password_confirmation %>
-    </div>
+      <p>
+        <%= f.submit "Sign up",class: "login_input" %>
+      </p>
+    <% end %>
 
-    <div class="actions sign_up_field">
-      <%= f.submit "Sign up" %>
-    </div>
-  <% end %>
-
-  <%= render "devise/shared/links" %>
+    <%= render "devise/shared/links" %>
+  </div>
 </div>
+  <% content_for :footer do %> <% end %>
+

@@ -3,7 +3,7 @@
   <li>
     <%= menu.menu %>
     <% if menu.user_id == current_user.id %>
-    <%= link_to '削除', menu_path(menu), method: :delete, remote: true %><br>
+    <%= link_to '削除', menu_path(menu), method: :delete, remote: true %>
     <% end %>
   </li>
   <% end %>

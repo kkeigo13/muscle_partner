@@ -4,19 +4,45 @@ class UsersController < ApplicationController
 
   def index
     @user = User.all
-  end
+    @chart_data = Tweet.where(user_id: current_user.id).order('work_date ASC')
+    @menu_chart_d =[]
+    @menu_name_d = []
+    @user_menu_d = Menu.where(user_visible:1)
+    @user_menu_d.each do |m|
 
-  def edit
-  @user = User.find(params[:id])
-  end
+        @chart_d = []
+        @chart_data.each do |data|
+          if m.menu == data.menu_name
+          @menu_name_d << data.menu_name
+          @one_day_d = [data.work_date.to_s, data.menu_count]
+          @chart_d << @one_day_d
+          end
 
-  def update
-    user = User.find(params[:id])
-    if user.user_id == current_user.id
-      user.update(params)
+        end
+      @menu_chart_d << @chart_d
+
     end
-    redirect_to :action => "index"
+
+    @menu_chart =[]
+    @user_menu = Menu.where(user_id: current_user.id)
+    @user_menu.each do |m|
+
+        @chart = []
+        @chart_data.each do |data|
+          if m.menu == data.menu_name
+          @menu_name = data.menu_name
+          @one_day = [data.work_date.to_s, data.menu_count]
+          @chart << @one_day
+          end
+
+        end
+      @menu_chart << @chart
+
+    end
+
   end
+
+
 
   private
   def move_to_sign_in
