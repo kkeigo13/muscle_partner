@@ -35,21 +35,25 @@
 <div class ="graph_bg">
     <div class="graph_area">
       <div id="graph_inner">
+      <!-- ここからデフォルトメニューのグラフ -->
         <% @menu_chart_d.each.with_index do |chart, index| %>
 
           <% if chart.empty? %>
 
           <% else %>
-            <%= line_chart chart, :library => {:curveType => "none", :backgroundColor => "#3A3A3A"}   %>
+            <%= @my_menu_d[index] %>
+            <%= line_chart chart, discrete: true,:library => {:curveType => "none", :backgroundColor => "#3A3A3A", :hAxis =>{:format => 'M/d', :viewWindowMode => 'maximized', :title => "日付", :titlePosition => 'out',:gridlines => {count: 7}}, :chartArea=>{width: '80%'}} %>
           <% end %>
         <% end %>
-        <% @my_menu.each do |menu| %>
-          <%= menu %>
-          <% @menu_chart.each do |chart| %>
-            <% if chart.empty? %>
-            <% else %>
+        <!--ここからユーザーメニューのグラフ -->
+        <% @menu_chart.each.with_index do |chart,index| %>
+          <% if chart.empty? %>
+
+          <% else %>
+
+              <%= @my_menu[index] %>
               <%= line_chart chart, discrete: true,:library => {:curveType => "none", :backgroundColor => "#3A3A3A", :hAxis =>{:format => 'M/d', :viewWindowMode => 'maximized', :title => "日付", :titlePosition => 'out',:gridlines => {count: 7}}, :chartArea=>{width: '80%'}} %>
-            <% end %>
+
           <% end %>
         <% end %>
       </div>

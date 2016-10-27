@@ -20,7 +20,10 @@ class UsersController < ApplicationController
 
         end
       @menu_chart_d << @chart_d
-
+    end
+    @my_menu_d = []
+    Menu.where(user_visible: 1).each do |a_menu|
+      @my_menu << a_menu.menu
     end
 
     @menu_chart =[]
@@ -38,7 +41,7 @@ class UsersController < ApplicationController
       @menu_chart << @chart
     end
     @my_menu = []
-    Menu.all.each do |a_menu|
+    Menu.where(user_id: current_user.id).each do |a_menu|
       @my_menu << a_menu.menu
     end
   end
