@@ -26,17 +26,20 @@ class UsersController < ApplicationController
     @menu_chart =[]
     @user_menu = Menu.where(user_id: current_user.id)
     @user_menu.each do |m|
-
         @chart = []
         @chart_data.each do |data|
           if m.menu == data.menu_name
-          @menu_name = data.menu_name
-          @one_day = [data.work_date.to_s, data.menu_count]
-          @chart << @one_day
+            @menu_name = data.menu_name
+            @one_day   = [data.work_date.to_s, data.menu_count]
+            @chart << @one_day
           end
 
         end
       @menu_chart << @chart
+    end
+    @my_menu = []
+    Menu.all.each do |a_menu|
+      @my_menu << a_menu.menu
     end
   end
 
