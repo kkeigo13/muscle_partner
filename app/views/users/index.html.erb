@@ -48,7 +48,7 @@
 
           <% else %>
           <%= @menu_name %>
-            <%= line_chart chart, :library => {:curveType => "none", :backgroundColor => "#3A3A3A"}  %>
+            <%= line_chart chart, discrete: true,:library => {:curveType => "none", :backgroundColor => "#3A3A3A", :hAxis =>{:format => 'M/d', :viewWindowMode => 'maximized', :title => "日付", :titlePosition => 'out',:gridlines => {count: 7}}, :chartArea=>{width: '80%'}} %>
           <% end %>
         <% end %>
       </div>

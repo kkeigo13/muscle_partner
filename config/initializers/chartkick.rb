@@ -1,10 +1,7 @@
 Chartkick.options = {
-  height: "200px",
+  height: "300px",
   colors: ["lime", "#999"],
   width: "100%",
-  margin: "0 auto",
-  hAxis: {
-    title: "日付"
-  }
+  margin: "0 auto"
 
 }
