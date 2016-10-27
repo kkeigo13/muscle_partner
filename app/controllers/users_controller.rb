@@ -38,7 +38,6 @@ class UsersController < ApplicationController
         end
       @menu_chart << @chart
     end
-
   end
 
 
