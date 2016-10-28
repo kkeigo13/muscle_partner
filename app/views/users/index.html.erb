@@ -17,16 +17,16 @@
           <%= image_tag 'no-images.png', alt: "プロフ画像" %>
         <% end %>
         </div>
-        <div id="user_data">
+        <div id="user_data_a">
           <%= current_user.nick_name %>
           さんの筋トレデータ<br>
-          <a href="/tweet/new/">--筋トレを始める</a><br>
+          <a href="/tweet/new/" class="data_span">--筋トレを始める</a><br>
           <a href="/menus/">--メニューを追加する</a><br>
           <a href="/tweet/">--筋トレの軌跡</a>
         </div>
       </div>
       <div class="table_row prof_a">
-        <%= link_to 'ユーザー情報編集', edit_user_registration_path %>
+        <%= link_to 'ユーザー情報編集', edit_user_registration_path, class: 'user_a' %>
       </div>
     </div>
   </div>
@@ -41,7 +41,7 @@
           <% if chart.empty? %>
 
           <% else %>
-            <%= @my_menu_d[index] %>
+          <p><%= @my_menu_d[index] %></p>
             <%= line_chart chart, discrete: true,:library => {:curveType => "none", :backgroundColor => "#3A3A3A", :hAxis =>{:format => 'M/d', :viewWindowMode => 'maximized', :title => "日付", :titlePosition => 'out',:gridlines => {count: 7}}, :chartArea=>{width: '80%'}} %>
           <% end %>
         <% end %>
@@ -51,7 +51,7 @@
 
           <% else %>
 
-              <%= @my_menu[index] %>
+          <p><%= @my_menu[index] %></p>
               <%= line_chart chart, discrete: true,:library => {:curveType => "none", :backgroundColor => "#3A3A3A", :hAxis =>{:format => 'M/d', :viewWindowMode => 'maximized', :title => "日付", :titlePosition => 'out',:gridlines => {count: 7}}, :chartArea=>{width: '80%'}} %>
 
           <% end %>

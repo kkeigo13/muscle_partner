@@ -38,6 +38,12 @@
   margin: 0 auto;
 }
 
+#graph_inner p{
+  color: white;
+  background-color: #bababa;
+  margin-top: 30px;
+  padding: 10px;
+}
 
 .graph_area text{
   font-size: 10px;
@@ -45,6 +51,10 @@
 .prof_area{
   display: table;
   width: 100%;
+}
+
+.user_a{
+  padding: 20px;
 }
 
 #icon_image{
@@ -57,28 +67,25 @@
   width: 80%;
   margin: 20px;
 }
-#user_data{
+#user_data_a{
   display: table-cell;
   width: 80%;
   font-size: 35px;
   vertical-align: middle;
   text-align: center;
+  padding: 20px;
 }
-#user_data a{
+#user_data_a a{
   font-size: 20px;
   text-decoration: none;
   display: inline-block;
-  background-position: 0 0;
-  background-size: 200% auto;
-  transition: .3s;
-  background-image: linear-gradient(to right, rgba(0,0,0,0) 50%, rgba(1,1,1,0.9) 50%);
 }
 
-#user_data a:hover{
+/*#user_data a:hover{
   background-position: -100% 0;
   color: #fff;
   padding: 10px;
-}
+}*/
 .table_row{
   display: table-row;
 }
@@ -102,6 +109,40 @@
   padding: 20px;
 }
 
+
+#user_data_a a{
+  color:#111;
+  position: relative;
+  display: inline-block;
+  transition: .3s;
+  line-height: 60px;
+}
+#user_data_a a::before,
+#user_data_a a::after{
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 1px;
+  background-color: #2ecc71;
+  transition: .3s;
+}
+
+#user_data_a a::before {
+  top: 0;
+  left: 0;
+}
+#user_data_a a::after {
+  bottom: 0;
+  right: 0;
+}
+
+#user_data_a a:hover{
+  color: #2ecc71;
+}
+#user_data_a a:hover::before,
+#user_data_a a:hover::after {
+  width: 100%;
+}
 
 /*ここからSP版のCSS*/
 @media screen and (max-width: 640px) {
