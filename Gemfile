@@ -56,6 +56,7 @@ gem 'paperclip'
 gem 'kaminari'
 gem 'chartkick'
 gem 'dateslices'
+gem 'jquery-turbolinks'
 group :production, :staging do
   gem 'rails_12factor'
 end
