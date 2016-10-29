@@ -28,7 +28,28 @@
   text-decoration: none;
   color:#bababa;
   font-size: 15px;
+  position: relative;
+  display: inline-block;
+  transition: .3s;
 }
+
+.tweet_wrap a::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  width: 0;
+  height: 1px;
+  background-color: white;
+  transition: .3s;
+}
+.tweet_wrap a:hover{
+  color: white;
+}
+.tweet_wrap a:hover::after {
+  width: 100%;
+}
+
 .line{
   width: 100%;
   border-bottom: 2px white solid;

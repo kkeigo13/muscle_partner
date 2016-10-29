@@ -8,6 +8,9 @@
     <%= f.text_field :remarks, cols: 20, rows: 5, value: @tweet.remarks, class: "login_input" %>
     <%= button_tag type: "submit", class: "login_input" do %>更新する<% end %>
     <% end %>
+    <p class="p-container">
+        <span><a href="/tweet/">投稿一覧に戻る</a></span>
+    </p>
   </div>
 </div>
 <% content_for :footer do %> <% end %>
