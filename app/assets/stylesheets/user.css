@@ -117,7 +117,6 @@
   position: relative;
   display: inline-block;
   transition: .3s;
-  line-height: 60px;
 }
 #user_data_a a::before,
 #user_data_a a::after{
@@ -145,7 +144,24 @@
 #user_data_a a:hover::after {
   width: 100%;
 }
-
+#message{
+  font-size: 25px;
+  margin: 20px 0;
+  display: table-cell;
+}
+#message p{
+  text-align: center;
+  border: 2px #909090;
+  border-style: outset;
+  padding: 5px;
+}
+#message p span{
+  color: red;
+  font-size: 30px;
+}
+#no_graph_m{
+  text-align: center;
+}
 /*ここからSP版のCSS*/
 @media screen and (max-width: 640px) {
 
@@ -210,5 +226,13 @@
 .prof_a a{
   margin-left: 0;
 }
-
+#message{
+  font-size: 20px;
+  margin: 20px 0;
+  display: block;
+}
+#message p span{
+  color: red;
+  font-size: 25px;
+}
   }

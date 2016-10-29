@@ -26,7 +26,17 @@
         </div>
       </div>
       <div class="table_row prof_a">
+        <div class="prof_a">
         <%= link_to 'ユーザー情報編集', edit_user_registration_path, class: 'user_a' %>
+        </div>
+        <div id="message">
+          <% if @tweet.empty? %>
+            <p>まだ筋トレの投稿がありません！</p>
+          <% else %>
+            <p>最後の筋トレは<%= @tweet[1].work_date %>です。<br>
+              <span><%= (Date.today - @tweet[1].work_date).to_i %></span>日間筋トレしてません!</p>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
@@ -35,6 +45,11 @@
 <div class ="graph_bg">
     <div class="graph_area">
       <div id="graph_inner">
+      <% if @menu_chart_d.empty? %>
+      <p id="no_graph_m">
+      筋トレを投稿するとグラフが表示されます。
+      </p>
+      <% end %>
       <!-- ここからデフォルトメニューのグラフ -->
         <% @menu_chart_d.each.with_index do |chart, index| %>
 

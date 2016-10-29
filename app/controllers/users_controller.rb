@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   before_action :move_to_sign_in
 
   def index
+    @tweet = Tweet.where(user_id: current_user.id).order('work_date DESC')
     @user = User.all
     @chart_data = Tweet.where(user_id: current_user.id).order('work_date ASC')
     @menu_chart_d =[]
