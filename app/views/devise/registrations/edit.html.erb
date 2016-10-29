@@ -24,7 +24,7 @@
     <% end %>
 
     <p>
-      <%= f.label :パスワード, class: "login" %> <em class="login_em">(変更無しの場合は空欄)</em><br />
+      <%= f.label :新しいパスワード, class: "login" %> <em class="login_em">(変更無しの場合は空欄)</em><br />
       <%= f.password_field :password, autocomplete: "off", class: "login_input" %>
       <% if @minimum_password_length %>
         <br />
@@ -33,7 +33,7 @@
     </p>
 
     <p>
-      <%= f.label :パスワード（確認）, class: "login" %><br />
+      <%= f.label :新しいパスワード（確認）, class: "login" %><br />
       <%= f.password_field :password_confirmation, autocomplete: "off", class: "login_input" %>
     </p>
 

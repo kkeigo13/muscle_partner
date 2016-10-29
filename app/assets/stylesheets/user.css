@@ -152,7 +152,7 @@
 #message p{
   text-align: center;
   border: 2px #909090;
-  border-style: outset;
+  border-style: solid;
   padding: 5px;
 }
 #message p span{
@@ -194,9 +194,7 @@
   text-align: center;
   margin-bottom: 20px;
 }
-#user_data_a a{
-  text-shadow: 2px 3px 1px #909090;
-}
+
 .main_visual{
   width: 100%;
   background-image: url(images/mainvisual_sp.jpg);
