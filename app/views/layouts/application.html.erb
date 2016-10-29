@@ -20,8 +20,11 @@
 <body>
 <header>
 <% if yield(:header).empty? %>
+
   <div id="big_head">
+    <p id="to_top" ><a href="/user/">◁TOP</a></p>
     <% if user_signed_in? %>
+
       <div id="navToggle">
       <div>
         <span></span> <span></span> <span></span>

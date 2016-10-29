@@ -3,7 +3,7 @@
   <h2 class="login_h2">Today's Work!</h2>
       <%= form_for @tweet do |f| %>
         <%= f.label :日付を選択, class: "login" %>
-        <%= f.date_field :work_date, placeholder: '日付',class: "login_input" %>
+        <%= f.date_field :work_date, placeholder: '日付',class: "login_input" %><br>
         <%= f.label :メニューを選択, class: "login" %>
         <%= f.collection_select :menu_name, @menu, :menu, :menu, :include_blank => "リストから選択" %><br>
         <%= f.label :回数（半角入力）, class: "login" %>

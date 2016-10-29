@@ -41,6 +41,9 @@ footer{
 }:*/
 
 /*ここからハンバーガーメニュー含めたヘッダーの記述*/
+#to_top{
+  display: none;
+}
 #navToggle {
     display:none; /*通常時は非表示にしておきます*/
     position:absolute; /*bodyに対しての絶対位置指定です*/
@@ -199,6 +202,16 @@ header ul li:last-child {border-bottom:none}
     -moz-transform: translateY(351px);
     -webkit-transform: translateY(351px);
     transform: translateY(351px)}
+#to_top{
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 20px;
+  }
+#to_top a{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
 }
 
 /*320px以下のデバイスに適用するCSS*/
@@ -210,6 +223,7 @@ header ul li:last-child {border-bottom:none}
 */
 /*mediaqueryここまで
 */
+
 .clear{
   clear: both;
 }

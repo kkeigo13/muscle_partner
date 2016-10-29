@@ -146,12 +146,14 @@
 
 /*ここからSP版のCSS*/
 @media screen and (max-width: 640px) {
+
+
 .big_bg {
     background-image: url(images/plus_menu_sp.jpg);
   }
 .common_wrap{
   width: 100% !important;
-  height: 500px;
+  height: 600px;
 }
 .table_row {
     display: table-row;
@@ -166,7 +168,7 @@
   width: 50%;
   margin: 0 auto;
 }
-#user_data{
+#user_data_a{
   display: block;
   width: 100%;
   font-size: 20px;
