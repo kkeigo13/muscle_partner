@@ -79,7 +79,6 @@
   font-size: 20px;
   text-decoration: none;
   display: inline-block;
-  font-family: serif;
 }
 
 /*#user_data a:hover{
@@ -113,37 +112,15 @@
 
 
 #user_data_a a{
-  color:#111;
-  position: relative;
-  display: inline-block;
-  transition: .3s;
-}
-#user_data_a a::before,
-#user_data_a a::after{
-  position: absolute;
-  content: '';
-  width: 0;
-  height: 1px;
-  background-color: #2ecc71;
   transition: .3s;
 }
 
-#user_data_a a::before {
-  top: 0;
-  left: 0;
-}
-#user_data_a a::after {
-  bottom: 0;
-  right: 0;
-}
+
 
 #user_data_a a:hover{
-  color: #2ecc71;
+  opacity: 0.8;
 }
-#user_data_a a:hover::before,
-#user_data_a a:hover::after {
-  width: 100%;
-}
+
 #message{
   font-size: 25px;
   margin: 20px 0;
@@ -161,6 +138,39 @@
 }
 #no_graph_m{
   text-align: center;
+}
+
+#link_area{
+  display: table;
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 10px 10px;  /* 左右 上下で記述 */
+}
+.link_button{
+  bbackground: -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #c9c9c9), color-stop(1.00, #c9c9c9), color-stop(0.00, #bdbdbd));
+background: -webkit-linear-gradient(top, #bdbdbd 0%, #c9c9c9 100%, #c9c9c9 100%);
+background: -moz-linear-gradient(top, #bdbdbd 0%, #c9c9c9 100%, #c9c9c9 100%);
+background: -o-linear-gradient(top, #bdbdbd 0%, #c9c9c9 100%, #c9c9c9 100%);
+background: -ms-linear-gradient(top, #bdbdbd 0%, #c9c9c9 100%, #c9c9c9 100%);
+background: linear-gradient(to bottom, #bdbdbd 0%, #c9c9c9 100%, #c9c9c9 100%);
+
+  color: white;
+  border-radius: 6px;
+  border: solid #909090 2px;
+}
+#link_new{
+  width: 420px;
+  padding: 10px;
+  display: table-cell;
+}
+
+.link_under{
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+  background-color: gray;
+  display: table-cell;
 }
 /*ここからSP版のCSS*/
 @media screen and (max-width: 640px) {
@@ -233,4 +243,10 @@
   color: red;
   font-size: 25px;
 }
+#link_area{
+  width: 100%;
+}
+.link_button{
+  width: 300px;
   }
+}

@@ -20,9 +20,17 @@
         <div id="user_data_a">
           <%= current_user.nick_name %>
           さんの筋トレデータ<br>
-          <a href="/tweet/new/" class="data_span">--筋トレを始める</a><br>
-          <a href="/menus/">--メニューを追加する</a><br>
-          <a href="/tweet/">--筋トレの軌跡</a>
+          <p id="link_area">
+            <a href="/tweet/new/" class="data_span">
+              <span id="link_new" class="link_button" >筋トレを始める</span>
+            </a><br>
+            <a href="/menus/">
+              <span class="link_under link_button">メニューを追加</span>
+            </a>
+            <a href="/tweet/">
+              <span class="link_under link_button">筋トレの軌跡</span>
+            </a>
+          </p>
         </div>
       </div>
       <div class="table_row prof_a">
@@ -33,8 +41,12 @@
           <% if @tweet.empty? %>
             <p>まだ筋トレの投稿がありません！</p>
           <% else %>
-            <p>最後の筋トレは<%= @tweet[0].work_date %>です。<br>
+            <% if (Date.today - @tweet[0].work_date) == 0 %>
+              <p>今日は筋トレ済みです！お疲れ様！</p>
+            <% else %>
+              <p>最後の筋トレは<%= @tweet[0].work_date %>です。<br>
               <span><%= (Date.today - @tweet[0].work_date).to_i %></span>日間筋トレしてません!</p>
+            <% end %>
           <% end %>
         </div>
       </div>
